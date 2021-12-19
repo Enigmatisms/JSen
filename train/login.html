@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8"> 
+    <title>login 5.0</title> 
+</head>
+<body>
+    <div align="center">
+        <h1>Log-in Page 5.0</h1>
+    </div>
+    <p align="center">Log-in front-end implementation</div>
+    <p align="center">Author: Enigmatisms</div>
+    <!--TODO: 显示当前时间-->
+
+    <!-- 执行函数：跳转到密码输入 -->
+    <div align="center">
+    <p>User Name:
+    <input type="text" id="username" placeholder="User name" value="" onkeyup="jump2Password()">
+    </p>
+    <!-- 此处可以实现一个 password加密: 使用js实现的算法
+    需要实现：如果输入正确就跳转，如果错误就alert，并且计数 -->
+    <p>Password:
+    <input type="password" id="password" placeholder="Password" value="" onkeyup="userCheck()">
+    </p>
+    </div>
+
+    <!-- 实现一个：sign in/sign up的转换：并且实现本地文件读取 -->
+    <script src="./login_modules.js"></script>
+</body>
+</html>
