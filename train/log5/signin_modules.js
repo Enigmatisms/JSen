@@ -59,9 +59,17 @@ password_box.onkeyup = function(event) {
 // 在按下回车、空格之后跳转到密码输入，按下esc后清除输入
 function processUserName(key_code) {
     if (key_code == 13 || key_code == 32) {
-        var name = document.getElementById("password");
-        name.focus();
-    } else if (key_code == 27) {
+        if (username_box.value.length == 0) {
+            document.getElementById("user_end").innerHTML=" User name can't be empty";
+            username_box.focus();
+            username_box.style.border="1px solid red";
+        } else {
+            document.getElementById("user_end").innerHTML="";
+            username_box.style.border="1px solid";
+            password_box.focus();
+        }
+        username_box.style.borderRadius="2px";
+    } else {
         username_box.value = "";
         username_box.blur();
         // 清除
@@ -87,5 +95,7 @@ function userCheck() {
         alert("Login failed, either user does not exist or password is wrong.");
     } else {
         alert("Too many wrong attempts. Rejecting further requests.")
+        username_box.value="";
+        password_box.value="";
     }
 }
