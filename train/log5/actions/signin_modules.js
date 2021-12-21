@@ -60,7 +60,7 @@ password_box.onkeyup = function(event) {
 function processUserName(key_code) {
     if (key_code == 13 || key_code == 32) {
         if (username_box.value.length == 0) {
-            document.getElementById("user_end").innerHTML=" User name can't be empty";
+            document.getElementById("user_end").innerHTML="User name can't be empty";
             username_box.focus();
             username_box.style.border="1px solid red";
         } else {
@@ -98,4 +98,13 @@ function userCheck() {
         username_box.value="";
         password_box.value="";
     }
+}
+
+function clearBoxes() {
+    username_box.value="";
+    password_box.value="";
+    document.getElementById("user_end").innerHTML="";
+    username_box.style.border="1px solid";
+    password_box.blur();
+    username_box.blur();
 }
