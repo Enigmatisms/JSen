@@ -1,1 +1,38 @@
-<!-- Nothing for now -->
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8"> 
+        <title>login 5.0</title> 
+        <link rel="stylesheet" type="text/css" href="./styles/elements.css">
+    </head>
+    <body>
+        <div align="center">
+            <h1>Log-in Page 5.0</h1>
+            <h3>Have no account, sign up now</h3>
+            <p id="time_disp"></p>
+        </div>
+    
+        <div name="logins" id="logins">
+            UserName:&nbsp
+            <input type="text" id="username" placeholder="User name" value="" onkeyup="checkUserName()">
+            <div id="user_end"></div>
+            <p></p>
+            Password:&nbsp&nbsp&nbsp
+            <input type="password" id="pswd_box" placeholder="Password" value="" onkeyup="check2Confirm()">
+            <div id="pswd_end"></div>
+            <p></p>
+            Confirm:&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="password" id="conf_box" placeholder="Confirm" value="" onkeyup="finalConfirm()">
+            <div id="conf_end"></div>
+            <p></p>
+        </div>
+        <p></p>
+        <div align="center">
+            <button type="button" id="buttons" onclick="mainPage()" style="width: 100px; height: 30px;">Back</button>
+        </div>
+    
+        <!-- 实现一个：sign in/sign up的转换：并且实现本地文件读取 -->
+        <script src="./actions/signup_modules.js"></script>
+        <script src="./actions/main.js"></script>
+    </body>
+    </html>

@@ -1,35 +1,8 @@
+import all_users from "./common.js"
 
 var wrong_counter = 0;
 var username_box = document.getElementById("username");
 var password_box = document.getElementById("password");
-
-class User {
-    // 此处的password可以是加密算法加密之后的密文，比如js的内置哈希函数
-    constructor(user_name, password, times = 0) {
-        this.user_name = user_name;
-        this.password = password;
-        this.log_time = times;
-    }
-
-    getUserName() {
-        return this.user_name;
-    }
-
-    setUserName(new_name) {
-        this.user_name = new_name;
-    }
-
-    timeIncrement() {
-        this.log_time += 1;
-    }
-};
-
-var all_users = {
-    "Dummy1":new User("Dummy1", "asdfghjkl", 0),
-    "Enigmatisms":new User("Enigmatisms", "qwerty", 0),
-    "Sentinel":new User("Sentinel", "1234567asd", 0),
-    "Raven":new User("Raven", "1212422", 0)
-};
 
 var valid_keys = new Set([13, 27, 32]);      // return, esc, space
 username_box.onkeyup = function(event) {
@@ -81,7 +54,6 @@ function userCheck() {
     var pswd = password_box.value;
     if (wrong_counter < 3) {
         if (uname in all_users) {
-            console.log("Uname " + uname + " is in the user list.");
             var user = all_users[uname];
             if (user.password == pswd) {
                 alert("Login successful, welcome " + user.user_name);
@@ -92,6 +64,7 @@ function userCheck() {
         } else {
             console.log("No user called: " + uname)
         }
+        password_box.value = "";
         alert("Login failed, either user does not exist or password is wrong.");
     } else {
         alert("Too many wrong attempts. Rejecting further requests.")
@@ -100,6 +73,7 @@ function userCheck() {
     }
 }
 
+// This is a call back function
 function clearBoxes() {
     username_box.value="";
     password_box.value="";

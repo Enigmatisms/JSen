@@ -12,6 +12,8 @@ class Loop {
 	}
 }
 
+var can_i_do_this = 0;
+
 function test() {
 	can_i_do_this = 1;
 	alert(can_i_do_this);
@@ -19,7 +21,9 @@ function test() {
 }
 
 function test2() {
-	alert(can_i_do_this);
+	var str = "test" + "yes";
+	console.log(str.charCodeAt());
+	console.log(str);
 	can_i_do_this += 1;
 }
 

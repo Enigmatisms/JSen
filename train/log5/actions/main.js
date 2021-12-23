@@ -21,10 +21,6 @@ function signIn() {
     in_signin = true;
 }
 
-function echo() {
-    console.log("Yes!!!!!!!!!!");
-}
-
 function goBack(call_back) {
     if (in_signin == true) {
         buttons.style.display = "block";
@@ -42,4 +38,4 @@ function outputTime() {
     document.getElementById("time_disp").innerHTML = date;
 }
 
-self.setInterval("outputTime()", 1000);
+self.setInterval("outputTime()", 500);
