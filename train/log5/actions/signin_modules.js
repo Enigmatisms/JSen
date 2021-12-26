@@ -1,10 +1,11 @@
-import all_users from "./common.js"
+import {all_users} from './common.js';
+
+const valid_keys = new Set([13, 27, 32]);      // return, esc, space
 
 var wrong_counter = 0;
 var username_box = document.getElementById("username");
 var password_box = document.getElementById("password");
 
-var valid_keys = new Set([13, 27, 32]);      // return, esc, space
 username_box.onkeyup = function(event) {
     var key_code = event.keyCode;
     if (valid_keys.has(key_code)) {
@@ -33,11 +34,11 @@ password_box.onkeyup = function(event) {
 function processUserName(key_code) {
     if (key_code == 13 || key_code == 32) {
         if (username_box.value.length == 0) {
-            document.getElementById("user_end").innerHTML="User name can't be empty";
+            document.getElementById("info").innerHTML="User name can't be empty";
             username_box.focus();
             username_box.style.border="1px solid red";
         } else {
-            document.getElementById("user_end").innerHTML="";
+            document.getElementById("info").innerHTML="";
             username_box.style.border="1px solid";
             password_box.focus();
         }
@@ -74,10 +75,10 @@ function userCheck() {
 }
 
 // This is a call back function
-function clearBoxes() {
+window.clearBoxes = function() {
     username_box.value="";
     password_box.value="";
-    document.getElementById("user_end").innerHTML="";
+    document.getElementById("info").innerHTML="";
     username_box.style.border="1px solid";
     password_box.blur();
     username_box.blur();

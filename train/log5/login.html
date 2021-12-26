@@ -23,14 +23,19 @@
 
     <div name="logins" id="logins">
         UserName:&nbsp
-        <input type="text" id="username" placeholder="User name" value="" onkeyup="jump2Password()">
-        <div id="user_end"></div>
+        <input type="text" id="username" placeholder="User name" value="">&nbsp&nbsp
+        <div id="user_end"><span id="info"></span></div>
         <p></p>
     </div>
     <div name="logins" id="logins">
         Password:&nbsp&nbsp&nbsp
-        <input type="password" id="password" placeholder="Password" value="" onkeyup="userCheck()">
-        <div id="pswd_end"></div>
+        <input type="password" id="password" placeholder="Password" value="">
+        <div id="pswd_end">
+            <div class="info"></div>
+            <div class="pswd_indicator" name="end_1"></div>
+            <div class="pswd_indicator" name="end_2"></div>
+            <div class="pswd_indicator" name="end_3"></div>
+        </div>
         <p></p>
     </div>
     <p></p>
@@ -39,7 +44,8 @@
     </div>
 
     <!-- 实现一个：sign in/sign up的转换：并且实现本地文件读取 -->
-    <script src="./actions/signin_modules.js"></script>
+    <!-- <script src="./actions/common.js"></script> -->
     <script src="./actions/main.js"></script>
+    <script type="module" src="./actions/signin_modules.js"></script>
 </body>
 </html>

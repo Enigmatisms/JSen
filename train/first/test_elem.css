@@ -1,0 +1,7 @@
+#elem div.pswd_indicator {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: #1cff1c;
+    display: inline-block
+}

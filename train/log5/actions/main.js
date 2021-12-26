@@ -8,7 +8,7 @@ cover_img.src = "../../assets/cover.png";
 
 function signUp() {
     // 网页跳转
-    window.location.href = "../first/web.html";
+    window.location.href = "./sign_up.html";
 }
 
 function signIn() {

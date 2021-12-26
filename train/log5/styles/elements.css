@@ -13,7 +13,7 @@ body {
     font-family: 'Noto Serif SC' !important;
 }
 
-#logins {
+[id^="logins"] {
     position: relative;
     margin: auto;
     text-align: left;
@@ -23,12 +23,27 @@ body {
     font-family: 'Noto Serif SC';
 }
 
-#user_end, #pswd_end {
+#user_end, #pswd_end, #conf_end {
     position: absolute;
-    width: auto;
-    right: -45%;
+    width: 100%;
     top: 0%;
     color: #dd0000;
     text-align: left;
     font-family: 'Noto Serif SC';
+    display: inline-block;
+}
+
+#indicator_box {
+    position: relative;
+    text-align: center;
+    height: 5px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#indicator_box div.pswd_indicator {
+    width: 50px;
+    height: 3px;
+    background-color: #c8c8c8;
+    display: inline-flex;
 }

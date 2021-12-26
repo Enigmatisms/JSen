@@ -62,6 +62,29 @@ function changeViz() {
 	}
 }
 
+indicators = document.getElementsByClassName("pswd_indicator");
+
+function weak() {
+	console.log(indicators);
+	indicators[0].style.backgroundColor = "red";
+	indicators[1].style.backgroundColor = "rgb(200, 200, 200)";
+	indicators[2].style.backgroundColor = "rgb(200, 200, 200)";
+}
+
+function moderate() {
+	console.log(indicators);
+	indicators[0].style.backgroundColor = "rgb(200, 200, 0)";
+	indicators[1].style.backgroundColor = "rgb(225, 200, 0)";
+	indicators[2].style.backgroundColor = "rgb(200, 200, 200)";
+}
+
+function strong() {
+	console.log(indicators);
+	indicators[0].style.backgroundColor = "rgb(50, 255, 50)";
+	indicators[1].style.backgroundColor = "rgb(50, 255, 50)";
+	indicators[2].style.backgroundColor = "rgb(50, 255, 50)";
+}
+
 let lp = new Loop(); 
 self.setInterval("lp.loop_func()", 1000);
 

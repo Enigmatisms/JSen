@@ -18,7 +18,7 @@ class User {
     timeIncrement() {
         this.log_time += 1;
     }
-};
+}
 
 var all_users = {
     "Dummy1":new User("Dummy1", "asdfghjkl", 0),
@@ -27,4 +27,4 @@ var all_users = {
     "Raven":new User("Raven", "1212422", 0)
 };
 
-export {User, all_users};
+export {all_users, User};

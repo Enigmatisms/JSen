@@ -12,27 +12,36 @@
             <p id="time_disp"></p>
         </div>
     
-        <div name="logins" id="logins">
+        <div name="logins" id="logins_username">
             UserName:&nbsp
-            <input type="text" id="username" placeholder="User name" value="" onkeyup="checkUserName()">
+            <input type="text" id="username" placeholder="User name" value="" onblur="onBlurFunc(0)">
             <div id="user_end"></div>
             <p></p>
+        </div>
+        <div name="logins" id="logins_password">
             Password:&nbsp&nbsp&nbsp
-            <input type="password" id="pswd_box" placeholder="Password" value="" onkeyup="check2Confirm()">
+            <input type="password" id="pswd_box" placeholder="Password" value="" onblur="onBlurFunc(1)"> &nbsp&nbsp
             <div id="pswd_end"></div>
+            <div id="indicator_box">
+                <div class="pswd_indicator" name="end_1"></div>
+                <div class="pswd_indicator" name="end_2"></div>
+                <div class="pswd_indicator" name="end_3"></div>
+            </div>
             <p></p>
+        </div>
+        <div name="logins" id="logins_confirm">
             Confirm:&nbsp&nbsp&nbsp&nbsp&nbsp
-            <input type="password" id="conf_box" placeholder="Confirm" value="" onkeyup="finalConfirm()">
+            <input type="password" id="conf_box" placeholder="Confirm" value="">
             <div id="conf_end"></div>
             <p></p>
         </div>
         <p></p>
         <div align="center">
-            <button type="button" id="buttons" onclick="mainPage()" style="width: 100px; height: 30px;">Back</button>
+            <button type="button" id="buttons" onclick="confirmSignup()" style="width: 100px; height: 30px;">Sign Up</button>
+            <button type="button" id="buttons" onclick="return2Main()" style="width: 100px; height: 30px;">Back</button>
         </div>
-    
+        
         <!-- 实现一个：sign in/sign up的转换：并且实现本地文件读取 -->
-        <script src="./actions/signup_modules.js"></script>
-        <script src="./actions/main.js"></script>
+        <script type="module" src="./actions/signup_modules.js"></script>
     </body>
     </html>

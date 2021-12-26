@@ -3,6 +3,7 @@
 <head> 
     <meta charset="utf-8"> 
     <title>enigamtisms.io</title> 
+    <link rel="stylesheet" type="text/css" href="./test_elem.css">
 </head>
 <body>
     <h1>A Hello World Web Page of Mine</h1>
@@ -11,11 +12,20 @@
     <span id='i3'>Press the button below to reset the counter.</span>
     <span id='i4'>Press the button below to reset the counter.</span><br>
     <img id="first_img" style="zoom:50%; display: none">
+    <div id="elem">
+        <input type="text" id="id0"><br>
+        <div class="pswd_indicator" name="end_1"></div>
+        <div class="pswd_indicator" name="end_2"></div>
+        <div class="pswd_indicator" name="end_3"></div>
+    </div>
     <p>
         <button type="button" onclick="pressButton(lp)">Press me</button><br>
         <input type="text" id="id1" onkeyup="testType()">
         <button type="button" onclick="test2()">Alert2</button>
-        <button type="button" onclick="changeViz()">Visible Image</button>
+        <button type="button" onclick="changeViz()">Visible Image</button><br>
+        <button type="button" onclick="weak()">Weak</button>
+        <button type="button" onclick="moderate()">Moderate</button>
+        <button type="button" onclick="strong()">Strong</button>
     </p>
     <script src="./first.js"></script>
 </body>
